@@ -13,10 +13,11 @@ If you download and use the repo, you should fully recognize and understand:
 
 - i. Unauthorized attacks without prior consent: including but not limited to deliberately evading system access control mechanisms, making abnormal use of network equipment and resources, or expanding permissions without authorization, and accessing information without authorization;
 - ii. Any direct or indirect consequences and losses caused by third-party (person, platform) dissemination, secondary development, script abuse, etc. have nothing to do with the author and are the responsibility of the user himself, and the author of this article does not bear any responsibility for this responsibility. Only for technical discussion and sharing;
-- iii. Respect personal labor results, prohibit commercial use . Personal use please state the source: [B4xinSynchronize](https://github.com/Bin4xin/WAFucker).
+- iii. Respect personal labor results, prohibit commercial use . Personal use please state the source: [WAFucker](https://github.com/Bin4xin/WAFucker).
 
-## 是什么？
+## 零：是什么？
 
-## 为什么做？
 
-## 怎么做？
+## 一：为什么做？
+
+## 二：怎么做？
