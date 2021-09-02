@@ -27,7 +27,7 @@ If you download and use the repository, you should fully recognize and understan
 
 ### # 0x01：什么是WAF？
 
-**Web应用防护墙 或又叫网页应用及入侵防御系统(英文：Web Application Firewall)**是通过执行一系列针对*HTTP/HTTPS*的安全策略来专门为*Web*应用提供保护的一款产品；
+*Web应用防护墙或又叫网页应用及入侵防御系统(英文：Web Application Firewall)*是通过执行一系列针对*HTTP/HTTPS*的安全策略来专门为*Web*应用提供保护的一款产品；
 
 主要用于防御针对网络应用层的攻击，如*SQL注入、跨站脚本攻击、参数篡改、应用平台漏洞攻击、拒绝服务攻击等*
 
@@ -39,11 +39,18 @@ If you download and use the repository, you should fully recognize and understan
 
 所以，我们需要手动进行WAF的绕过，这样也是我们的最终目标，能够尽可能绕过WAF来进行渗透测试，防止其作“拦路虎”。
 
+
 ## 二：怎么做？
 
 绕过WAF前肯定需要对WAF的工作原理有一定的理解。本文主要从绕过WAF过程中的注意点出发，尝试理解WAF的运作，构建一个简单的知识框架。
 
-## 三：参考
+### # 2x01：[怎么绕过WAF](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E7%BB%95%E8%BF%87)
+
+## 三：其他拓展
+
+### # 3x01：[怎么开发WAF](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E5%BC%80%E5%8F%91)
+
+## 四：参考
 
 - [WAF的工作原理和绕过浅析](https://blog.csdn.net/qq_36119192/article/details/90113167)
 - [什么是WAF](https://www.huaweicloud.com/zhishi/dyl46.html)
