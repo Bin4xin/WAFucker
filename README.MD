@@ -23,7 +23,7 @@ If you download and use the repository, you should fully recognize and understan
 - ii. Any direct or indirect consequences and losses caused by third-party (person, platform) dissemination, secondary development, script abuse, etc. have nothing to do with the author and are the responsibility of the user himself, and the author of this article does not bear any responsibility for this responsibility. Only for technical discussion and sharing;
 - iii. Respect personal labor results, prohibit commercial use. Personal use please state the source: [WAFucker](https://github.com/Bin4xin/WAFucker).
 
-## 零：是什么？
+## 零：是什么？（***W***hat?）
 
 ### # 0x01：什么是WAF？
 
@@ -33,14 +33,14 @@ If you download and use the repository, you should fully recognize and understan
 
 ### # 0x02：[怎么识别WAF？](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E8%AF%86%E5%88%AB)
 
-## 一：为什么做？
+## 一：为什么做？（***W***hy?）
 
 我们在实际的渗透测试过程中，经常会碰到网站存在WAF的情况。网站存在WAF，意味着我们不能使用安全工具对网站进行测试，因为一旦触碰了WAF的规则，轻则丢弃报文，重则拉黑IP。
 
 所以，我们需要手动进行WAF的绕过，这样也是我们的最终目标，能够尽可能绕过WAF来进行渗透测试，防止其作“拦路虎”。
 
 
-## 二：怎么做？
+## 二：怎么做？（HO***W***?）
 
 绕过WAF前肯定需要对WAF的工作原理有一定的理解。本文主要从绕过WAF过程中的注意点出发，尝试理解WAF的运作，构建一个简单的知识框架。
 
