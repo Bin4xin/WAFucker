@@ -1,3 +1,21 @@
+
+目录
+---
+- [WAFucker](#wafucker)
+  - [***请注意!!!ATTENTION PLZ!!!***](#%E8%AF%B7%E6%B3%A8%E6%84%8Fattention-plz)
+  - [零：是什么？（***W***hat?）](#%E9%9B%B6%E6%98%AF%E4%BB%80%E4%B9%88what)
+    - [# 0x01：什么是WAF？](#-0x01%E4%BB%80%E4%B9%88%E6%98%AFwaf)
+    - [# 0x02：WAF的种类](#-0x02waf%E7%9A%84%E7%A7%8D%E7%B1%BB)
+    - [# 0x03：WAF的工作原理](#-0x03waf%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86)
+  - [一：为什么做？（***W***hy?）](#%E4%B8%80%E4%B8%BA%E4%BB%80%E4%B9%88%E5%81%9Awhy)
+    - [# 1x01：为什么要了解WAF？](#-1x01%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BA%86%E8%A7%A3waf)
+    - [# 1x02：WAF的优缺点有哪些？](#-1x02waf%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E6%9C%89%E5%93%AA%E4%BA%9B)
+  - [二：怎么做？（HO***W***?）](#%E4%BA%8C%E6%80%8E%E4%B9%88%E5%81%9Ahow)
+    - [# 2x01：怎么识别WAF？](#-2x01%E6%80%8E%E4%B9%88%E8%AF%86%E5%88%ABwaf)
+    - [# 2x02：怎么绕过WAF](#-2x02%E6%80%8E%E4%B9%88%E7%BB%95%E8%BF%87waf)
+    - [# 2x03：怎么开发WAF](#-2x03%E6%80%8E%E4%B9%88%E5%BC%80%E5%8F%91waf)
+  - [三：参考](#%E4%B8%89%E5%8F%82%E8%80%83)
+
 # WAFucker
 
 互联网发展至今将近三十余年，当下随着信息网络的不断发展全球信息化进程不断加速，网络安全行业从而也迎来新机遇、新挑战；
@@ -27,11 +45,22 @@ If you download and use the repository, you should fully recognize and understan
 
 ### # 0x01：什么是WAF？
 
-*Web应用防护墙或又叫网页应用及入侵防御系统(英文：Web Application Firewall)*是通过执行一系列针对*HTTP/HTTPS*的安全策略来专门为*Web*应用提供保护的一款产品；
+*WAF：Web应用防护墙或又叫网页应用及入侵防御系统(英文：Web Application Firewall)*是通过执行一系列针对*HTTP/HTTPS*的安全策略来专门为*Web*应用提供保护的一款产品；
 
 主要用于防御针对网络应用层的攻击，如*SQL注入、跨站脚本攻击、参数篡改、应用平台漏洞攻击、拒绝服务攻击等*
 
-### # 0x02：[怎么识别WAF？](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E8%AF%86%E5%88%AB)
+### # 0x02：WAF的种类
+
+WAF分为非嵌入型WAF和嵌入型WAF，如下表：
+
+ WAF | 非嵌入型WAF | 嵌入型WAF
+-------|---------------------------|---------------------------
+ 种类 | **硬件型WAF、云WAF、软件型WAF**之类 | 网站**内置的WAF**
+ 流量解析 | 自身完成流量解析 | 接收流量为已经解析完成 
+
+···具体可见[表1-1](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E8%AF%86%E5%88%AB)
+
+### # 0x03：WAF的工作原理
 
 ## 一：为什么做？（***W***hy?）
 
@@ -39,18 +68,23 @@ If you download and use the repository, you should fully recognize and understan
 
 所以，我们需要手动进行WAF的绕过，这样也是我们的最终目标，能够尽可能绕过WAF来进行渗透测试，防止其作“拦路虎”。
 
+### # 1x01：为什么要了解WAF？
+
+### # 1x02：WAF的优缺点有哪些？
 
 ## 二：怎么做？（HO***W***?）
 
 绕过WAF前肯定需要对WAF的工作原理有一定的理解。本文主要从绕过WAF过程中的注意点出发，尝试理解WAF的运作，构建一个简单的知识框架。
 
-### # 2x01：[怎么绕过WAF](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E7%BB%95%E8%BF%87)
 
-## 三：其他拓展
+### # 2x01：[怎么识别WAF？](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E8%AF%86%E5%88%AB)
 
-### # 3x01：[怎么开发WAF](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E5%BC%80%E5%8F%91)
+### # 2x02：[怎么绕过WAF](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E7%BB%95%E8%BF%87)
 
-## 四：参考
+### # 2x03：[怎么开发WAF](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E5%BC%80%E5%8F%91)
+
+## 三：参考
 
 - [WAF的工作原理和绕过浅析](https://blog.csdn.net/qq_36119192/article/details/90113167)
 - [什么是WAF](https://www.huaweicloud.com/zhishi/dyl46.html)
+- [盘点：常见WAF进程/服务与WAF识别总结](https://www.secrss.com/articles/27147)
