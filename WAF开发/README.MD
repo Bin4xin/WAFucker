@@ -45,23 +45,24 @@ firewall:`https://dash.cloudflare.com/{random-token-value}/{domain.value}/firewa
 - **针对文件读取payload的黑名单：**
 
 	- `(http.request.uri.path contains "etc/passwd")`
-		- ```bash
-	➜ bin4xin src curl https://about.sentrylab.cn/etc/passwd -I
-	HTTP/2 403
-	date: Fri, 23 Jul 2021 02:05:34 GMT
-	content-type: text/plain; charset=UTF-8
-	content-length: 16
-	x-frame-options: SAMEORIGIN
-	cache-control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
-	expires: Thu, 01 Jan 1970 00:00:01 GMT
-	cf-request-id: 0b72b571c10000ead3f0a9d000000001
-	expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-	report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=M5QRiSM6AQIHABiTpenP95FWMk%2FHuRnQpjqIQ9WDX0d%2FM9fI6nr0TpYUtThWUa64GPpRP%2Baubtxi4kHZ7UYNvA%2BXuhkeX73zKJLD6JtsWWRb96yS3KbdotjjJMqBX6%2F9DFUFfQU%3D"}],"group":"cf-nel","max_age":604800}
-	nel: {"report_to":"cf-nel","max_age":604800}
-	server: cloudflare
-	cf-ray: 6731582f792aead3-LAX
-	alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443"; ma=86400
-		  ```
+    - 
+        ```
+        ➜ bin4xin src curl https://about.sentrylab.cn/etc/passwd -I
+        HTTP/2 403
+        date: Fri, 23 Jul 2021 02:05:34 GMT
+        content-type: text/plain; charset=UTF-8
+        content-length: 16
+        x-frame-options: SAMEORIGIN
+        cache-control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+        expires: Thu, 01 Jan 1970 00:00:01 GMT
+        cf-request-id: 0b72b571c10000ead3f0a9d000000001
+        expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+        report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=M5QRiSM6AQIHABiTpenP95FWMk%2FHuRnQpjqIQ9WDX0d%2FM9fI6nr0TpYUtThWUa64GPpRP%2Baubtxi4kHZ7UYNvA%2BXuhkeX73zKJLD6JtsWWRb96yS3KbdotjjJMqBX6%2F9DFUFfQU%3D"}],"group":"cf-nel","max_age":604800}
+        nel: {"report_to":"cf-nel","max_age":604800}
+        server: cloudflare
+        cf-ray: 6731582f792aead3-LAX
+        alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443"; ma=86400
+        ```
 
 - **目录遍历payload黑名单：**
 
