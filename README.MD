@@ -79,9 +79,9 @@ WAF分为非嵌入型WAF和嵌入型WAF，如下表：
 
 ### # 2x01：[怎么识别WAF？](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E8%AF%86%E5%88%AB)
 
-### # 2x02：[怎么绕过WAF](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E7%BB%95%E8%BF%87)
+### # 2x02：[怎么绕过WAF？](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E7%BB%95%E8%BF%87)
 
-### # 2x03：[怎么开发WAF](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E5%BC%80%E5%8F%91)
+### # 2x03：[怎么开发WAF？](https://github.com/Bin4xin/WAFucker/tree/master/WAF%E5%BC%80%E5%8F%91)
 
 ## 三：参考
 
