@@ -1,46 +1,20 @@
 # WAFucker - 开发
 
-## 零：*CloudFlare WAF*
+## 零：*云WAF*
 
-最近在研究web防火墙，看到CloudFlare有现成的云WAF供使用，于是就研究了研究，自定义了一些自己需要的web拦截规则。
+最近在研究web防火墙，看到CloudFlare有现成的云WAF供使用，于是就研究了研究，出了一些自定义自己适用的[教程](https://about.sentrylab.cn/help/WAF-developed-by-Grayscale-forwarding/)
 
-所需：
+也一直在思考关于云WAF的接入模式。
 
-- 域名
-- 域名对应解析IP开放WEB Server
-- CloudFlare帐号注册即可
+#### # 0x01 云WAF的接入模式
 
+网上有很多现成的资料，比如[华为云waf文档的这段：](https://github.com/huaweicloudDocs/waf)
 
-一般步骤为：
+> 域名接入WAF后，WAF作为一个反向代理存在于客户端和服务器之间，服务器的真实IP被隐藏起来，Web访问者只能看到WAF的IP地址。
 
-假设您的域名购买服务商为阿里云；
+under-protection.domain.com
 
-- 1.登录阿里云域名面板设置解析IP；
-- 2.阿里云域名面板DNS Server修改为：`diva.ns.cloudflare.com`、`nitin.ns.cloudflare.com`；
-- 3.进入[CloudFlare](https://www.cloudflare.com/zh-cn/)，添加站点，添加CloudFlare指定认证页面添加到Web root目录下；
-- 4.配置WAF。
-
-#### # 0x01 解析IP
-- [云解析DNS - 阿里云](https://help.aliyun.com/document_detail/29716.html)
-
-#### # 0x02 自定义DNS Server
-把DNS解析服务器解析成步骤2即可；步骤3同样根据页面引导操作即可，此处不做演示。
-
-#### # 0x03 CloudFlare WAF config
-
-进入CloudFlare主页，点击域名`{domain.info}` -> 防火墙 -> 添加筛选器
-
-firewall:`https://dash.cloudflare.com/{random-token-value}/{domain.value}/firewall`
-
-在配置过滤器时，我针对个人需求和当前攻击行为进行了一些思考：
-
-- 对一个静态站点来说，很明显我们对外提供WEB服务只用到GET请求，没有其他请求，所以我就**把POST添加到了黑名单内**：
-
-	- `(http.request.method eq "POST")`
-
-	![截屏2021-07-09 下午5.01.03.png](https://i.loli.net/2021/07/23/8KmS1WMqGQEniO2.png)
-
-**值得一提的是：您需要注意如果您添加的是根域名`a.com`DNS服务器为CloudFlare，那么firewall将会作用于所有可识别的域名如`1.a.com & 2.a.com` etc...**
+- [WAF普及篇](https://ekek.live/2020/05/20/WAF%E6%99%AE%E5%8F%8A%E7%AF%87/)
 
 - **针对文件读取payload的黑名单：**
 
